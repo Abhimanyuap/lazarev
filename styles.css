@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    color: #fff;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    padding: 3vh 14.3vh;
+    height: 11vh;
+    background-color: #111;
+    z-index: 10;
+}
+nav>.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+nav .category-menu{
+    display: flex;
+    padding: 1vh 0;
+    gap: 1.5vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.2vh;
+    position: relative;
+    z-index: 9;
+}
+nav .category-menu h4{
+    cursor: pointer;
+    letter-spacing:0;
+    margin-bottom: 5vh;
+}
+nav .category-menu h5{
+    margin-bottom: 2vh;
+    display: none;
+    overflow: hidden;
+}
+nav .category-menu h5 span {
+    font-size: 10px;
+    font-weight: 400;
+    font-weight: 400;
+    transform: translateY(25px);
+    display: inline-block;
+    /* background-color: red; */
+}
+nav button{
+    background-color: #0DA34E;
+    display: flex;
+    gap: 2.5vh;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    border: none;
+    padding: 5px;
+    transition: 1s ease-out;
+}
+nav button svg{
+    height: 4vh;
+    background-color: #0DA34E;
+    border-radius: 50%;
+}
+nav .bottom-menu{
+    height: 0%;
+    width: 86vw;
+    border-bottom:1px solid #dadada ;
+    position: absolute;
+    top: 100%;
+    z-index: 7;
+    background-color: #111;
+}
+
+
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-end;
+    background-color: #111;
+    padding: 8vh 0;
+}
+#page1 h1{
+    font-size: 8.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 20vh;
+}
+#page1 h1 svg{
+    height: 5.6vw;
+    width: 5.6vw;
+    background-color: #0DA34E;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+}
+#page1 h1 svg:hover{
+    transform: scale(.7) rotate(-20deg);
+}
+#page1 p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 4vh;
+}
+#page1 .page1-h4Item h4{
+    line-height: 6vh;
+    font-weight: 400;
+    font-size: 18px;
+} 
+#page1 .page1-h4Item span{
+    border: 0.1px solid #fff;
+    padding: 5px 4px;
+    border-radius: 50px;
+}
+#page1 #moving-div{
+    position: absolute;
+    bottom: -10%;
+    margin-top: 10vh;
+    white-space: nowrap;
+    padding: 0 2vw ;
+    overflow: hidden;
+    width: 44%;
+    /* height: 0vh; */
+}
+#moving-div .move{
+    display: inline-block;
+    animation-name: moves;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#moving-div .move img{
+    height: 6vh;
+    margin: 0 0.5vw;
+}
+#moving-div #blur-left{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    background: linear-gradient(to right,#111,transparent);
+}
+#moving-div #blur-right{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    background: linear-gradient(to right,transparent,#111);
+}
+
+@keyframes moves {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+}

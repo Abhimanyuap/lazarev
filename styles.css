@@ -214,17 +214,52 @@ nav .bottom-menu{
     width: 100%;
     border-top: 0.5px solid #a09e9e50;
     padding-top: 5vh;
+    position: relative;
 }
 #page2 #page2-right div:nth-child(1){
     border: none;
+}
+#page2 .page2-image{
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    object-fit:cover ;
+    scale: 0;
+    cursor: pointer;
 }
 
 
 #page3{
     height: 100vh;
     width: 100%;
+    background-image: url("https://watermark.lovepik.com/photo/40080/5815.jpg_wh1200.jpg");
+    background-size: cover;
+    position: relative;
 }
-
+#page3>#play-btn{
+    height: 10vw;
+    width: 10vw;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page3 #triangle-btn{
+    width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-left: 40px solid #0f0f0f;
+	border-bottom: 20px solid transparent;
+}
 
 #page4{
     height: 100vh;

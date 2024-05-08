@@ -50,3 +50,38 @@ function navAnimation() {
 }
 
 navAnimation();
+
+// page 2 animation
+ 
+function page2Animation () {
+    const page2right = document.querySelectorAll("#page2-right div");
+    // const page2image = document.querySelectorAll(".page2-image")
+    
+    page2right.forEach((element,index) => {
+        element.addEventListener("mouseenter", ()=>{
+        //    page2image[index].style.opacity = "1";
+            //   element.childNodes[3].style.opacity="1";
+              gsap.to(element.childNodes[3],{
+                opacity : 1,
+                scale : 1
+              })
+        })
+        element.addEventListener("mouseleave", ()=>{
+            // page2image[index].style.opacity = "0";
+            // element.childNodes[3].style.opacity="0";
+            gsap.to(element.childNodes[3],{
+                opacity : 0,
+                scale : 0
+              })
+         });
+    
+         element.addEventListener("mousemove",(dets)=>{
+            gsap.to(element.childNodes[3],{
+                x: dets.x - element.getBoundingClientRect().x-40,
+                y: dets.y - element.getBoundingClientRect().y- 40
+            })
+         })
+    })
+}
+
+page2Animation();
